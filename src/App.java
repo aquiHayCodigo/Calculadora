@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
@@ -154,5 +156,12 @@ public class App {
                 operadores.setVisible(false);
             }
         }); */
+
+        // Para detectar que se ha pulsado la tecla del numero 1 aplicada al botón de la calculadora
+        n1.addKeyListener(new KeyAdapter(){
+            public void keyPressed(KeyEvent e){
+                if (e.getKeyCode()==KeyEvent.VK_1)
+            })
+        });
     }
 }
